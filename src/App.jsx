@@ -1,6 +1,6 @@
 // App.jsx
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 import Navigation from './components/layout/Navigation';
 import Header from './components/layout/Header';
@@ -16,7 +16,7 @@ import {
 } from './pages';
 
 // Initialize GA with your measurement ID
-ReactGA.initialize('G-XXXXXXXXXX'); // Replace with your GA4 measurement ID
+ReactGA.initialize('G-G717RLS2PT'); // Replace with your GA4 measurement ID
 
 // Create a component to track page views
 function PageTracker() {
@@ -36,9 +36,9 @@ const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <Router>
-      <ScrollToTop /> {/* Add ScrollToTop first */}
-      <PageTracker /> {/* Then PageTracker */}
+    <Router basename="/pricing">
+      <ScrollToTop />
+      <PageTracker />
       <div className="min-h-screen flex">
         <Navigation isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
         

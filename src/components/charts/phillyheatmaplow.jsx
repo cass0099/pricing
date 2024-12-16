@@ -14,7 +14,7 @@ const PhillyHeatMapL = () => {
         <div className="relative h-4 w-48">
           <svg width="100%" height="100%">
             <defs>
-              <linearGradient id="colorScale" x1="0%" y1="0%" x2="100%" y1="0%">
+              <linearGradient id="colorScale" x1="0%" y1="0%" x2="100%">
                 {gradientStops.map((stop, i) => (
                   <stop
                     key={i}
