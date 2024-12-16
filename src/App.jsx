@@ -36,7 +36,7 @@ const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <Router basename="/pricing">
+    <Router>
       <ScrollToTop />
       <PageTracker />
       <div className="min-h-screen flex">
